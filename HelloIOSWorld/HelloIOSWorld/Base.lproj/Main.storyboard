@@ -16,28 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPB-h5-hzh">
-                                <rect key="frame" x="20" y="44" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPB-h5-hzh">
+                                <rect key="frame" x="20" y="44" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qzb-fd-xnR">
-                                <rect key="frame" x="20" y="73" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qzb-fd-xnR">
+                                <rect key="frame" x="20" y="52" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="iZZ-Es-2mF"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Yh-y1I">
-                                <rect key="frame" x="20" y="115" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Yh-y1I">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="name"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iis-KL-bPb">
-                                <rect key="frame" x="20" y="157" width="374" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iis-KL-bPb">
+                                <rect key="frame" x="164.5" y="432.5" width="85" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Say Hello"/>
                                 <connections>
@@ -47,14 +46,36 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qzb-fd-xnR" secondAttribute="trailing" constant="20" id="54h-lj-2Ao"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPB-h5-hzh" secondAttribute="trailing" constant="20" id="Gcu-QT-Bq8"/>
+                            <constraint firstItem="tPB-h5-hzh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Joz-Wz-bEW"/>
+                            <constraint firstItem="Iis-KL-bPb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QPV-Dn-TRG"/>
+                            <constraint firstItem="tPB-h5-hzh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vqw-fi-kji"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R5z-Yh-y1I" secondAttribute="trailing" constant="20" id="XMo-0J-HFA"/>
+                            <constraint firstItem="R5z-Yh-y1I" firstAttribute="top" secondItem="Qzb-fd-xnR" secondAttribute="bottom" constant="8" symbolic="YES" id="aDI-T6-625"/>
+                            <constraint firstItem="R5z-Yh-y1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dGV-y4-hmp"/>
+                            <constraint firstItem="Qzb-fd-xnR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fGe-9e-NO0"/>
+                            <constraint firstItem="Qzb-fd-xnR" firstAttribute="top" secondItem="tPB-h5-hzh" secondAttribute="bottom" constant="8" symbolic="YES" id="lXX-a7-Wot"/>
+                            <constraint firstItem="Iis-KL-bPb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wAY-Lf-e6p"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="n5A-bQ-dgA" appends="YES" id="NMm-Ev-ShF"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="R5z-Yh-y1I" id="EHf-Mf-F9z"/>
-                        <outlet property="nameTextField" destination="Qzb-fd-xnR" id="WnM-5b-9Q3"/>
+                        <outlet property="nameTextField" destination="Qzb-fd-xnR" id="Lbb-RB-cHn"/>
                         <outlet property="resultLabel" destination="tPB-h5-hzh" id="6MJ-5x-hh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="n5A-bQ-dgA">
+                    <connections>
+                        <action selector="dismissKeypad:" destination="BYZ-38-t0r" id="q95-aM-cYb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
