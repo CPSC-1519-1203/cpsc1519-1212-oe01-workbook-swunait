@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter08Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTW-fv-Uml">
+                                <rect key="frame" x="53.5" y="44" width="335" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-BT-50d">
+                                <rect key="frame" x="20" y="93" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="g9v-kq-DFx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="celsius temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kxa-6l-S6g">
+                                <rect key="frame" x="20" y="131" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Q8Y-Ue-FVH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbh-zw-BCb">
+                                <rect key="frame" x="170" y="173" width="76" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ZLV-iB-q6W"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Convert">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="convertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u9k-Jr-wwX"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-35" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="eHz-cm-Q0b">
+                                <rect key="frame" x="160" y="224" width="94" height="32"/>
+                                <connections>
+                                    <action selector="celisusStepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GHg-Mi-nJj"/>
+                                </connections>
+                            </stepper>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-35" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="KKr-x5-q7q">
+                                <rect key="frame" x="18" y="278" width="381" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="zhf-sb-zk7"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="celisusSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="igJ-hq-4P6"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="kLa-BT-50d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6fK-lv-NoP"/>
+                            <constraint firstItem="kLa-BT-50d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6y9-Rh-pwQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hTW-fv-Uml" secondAttribute="trailing" constant="25.5" id="AjB-uc-ruK"/>
+                            <constraint firstItem="Mbh-zw-BCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="FKN-MH-CVc"/>
+                            <constraint firstItem="Kxa-6l-S6g" firstAttribute="leading" secondItem="KKr-x5-q7q" secondAttribute="leading" id="I8P-IC-CsU"/>
+                            <constraint firstItem="Mbh-zw-BCb" firstAttribute="centerX" secondItem="KKr-x5-q7q" secondAttribute="centerX" id="JDu-Un-D3H"/>
+                            <constraint firstItem="hTW-fv-Uml" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OHz-U6-RMF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KKr-x5-q7q" secondAttribute="bottom" constant="555" id="PU0-G7-4ub"/>
+                            <constraint firstItem="KKr-x5-q7q" firstAttribute="top" secondItem="eHz-cm-Q0b" secondAttribute="bottom" constant="22" id="QsC-qF-aLf"/>
+                            <constraint firstItem="kLa-BT-50d" firstAttribute="top" secondItem="hTW-fv-Uml" secondAttribute="bottom" constant="8" id="Rve-Bt-Hwa"/>
+                            <constraint firstItem="kLa-BT-50d" firstAttribute="trailing" secondItem="Kxa-6l-S6g" secondAttribute="trailing" id="ZgH-rV-hdu"/>
+                            <constraint firstItem="Kxa-6l-S6g" firstAttribute="top" secondItem="kLa-BT-50d" secondAttribute="bottom" constant="8" id="Zrr-7y-Wct"/>
+                            <constraint firstItem="hTW-fv-Uml" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53.5" id="hlo-Xl-3tJ"/>
+                            <constraint firstItem="kLa-BT-50d" firstAttribute="leading" secondItem="Kxa-6l-S6g" secondAttribute="leading" id="irD-oo-nhE"/>
+                            <constraint firstItem="Kxa-6l-S6g" firstAttribute="centerX" secondItem="eHz-cm-Q0b" secondAttribute="centerX" id="kOv-Rg-Zbw"/>
+                            <constraint firstItem="eHz-cm-Q0b" firstAttribute="top" secondItem="Mbh-zw-BCb" secondAttribute="bottom" constant="20" id="shB-Qk-bUU"/>
+                            <constraint firstItem="Mbh-zw-BCb" firstAttribute="top" secondItem="Kxa-6l-S6g" secondAttribute="bottom" constant="8" id="vaA-34-Nsv"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xgO-A3-3ue" appends="YES" id="rIP-lc-v1O"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="celisusTextField" destination="Kxa-6l-S6g" id="iVh-8c-BT1"/>
+                        <outlet property="celsisuStepper" destination="eHz-cm-Q0b" id="fHP-tN-w91"/>
+                        <outlet property="celsiusSlider" destination="KKr-x5-q7q" id="O5D-Sm-m3C"/>
+                        <outlet property="fahrenheitLabel" destination="kLa-BT-50d" id="yR9-U7-uTO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xgO-A3-3ue">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="iBM-Pe-ggz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
