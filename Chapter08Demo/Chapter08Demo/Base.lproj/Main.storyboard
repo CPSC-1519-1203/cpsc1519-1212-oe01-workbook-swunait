@@ -69,17 +69,22 @@
                                     <action selector="celisusSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="igJ-hq-4P6"/>
                                 </connections>
                             </slider>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NaitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rjH-9n-mto">
+                                <rect key="frame" x="191.5" y="427" width="31" height="42"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="rjH-9n-mto" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="09s-hi-cue"/>
                             <constraint firstItem="kLa-BT-50d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6fK-lv-NoP"/>
                             <constraint firstItem="kLa-BT-50d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6y9-Rh-pwQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hTW-fv-Uml" secondAttribute="trailing" constant="25.5" id="AjB-uc-ruK"/>
                             <constraint firstItem="Mbh-zw-BCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="FKN-MH-CVc"/>
                             <constraint firstItem="Kxa-6l-S6g" firstAttribute="leading" secondItem="KKr-x5-q7q" secondAttribute="leading" id="I8P-IC-CsU"/>
                             <constraint firstItem="Mbh-zw-BCb" firstAttribute="centerX" secondItem="KKr-x5-q7q" secondAttribute="centerX" id="JDu-Un-D3H"/>
+                            <constraint firstItem="rjH-9n-mto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KK4-s6-3QY"/>
                             <constraint firstItem="hTW-fv-Uml" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OHz-U6-RMF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KKr-x5-q7q" secondAttribute="bottom" constant="555" id="PU0-G7-4ub"/>
                             <constraint firstItem="KKr-x5-q7q" firstAttribute="top" secondItem="eHz-cm-Q0b" secondAttribute="bottom" constant="22" id="QsC-qF-aLf"/>
@@ -101,6 +106,7 @@
                         <outlet property="celsisuStepper" destination="eHz-cm-Q0b" id="fHP-tN-w91"/>
                         <outlet property="celsiusSlider" destination="KKr-x5-q7q" id="O5D-Sm-m3C"/>
                         <outlet property="fahrenheitLabel" destination="kLa-BT-50d" id="yR9-U7-uTO"/>
+                        <outlet property="logoImageView" destination="rjH-9n-mto" id="1Dc-YM-gX5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,6 +120,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NaitLogo" width="31" height="42"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

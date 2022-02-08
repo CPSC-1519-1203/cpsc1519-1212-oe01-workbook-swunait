@@ -15,8 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NaitLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kpy-av-dMP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="Kpy-av-dMP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0cS-BI-FeW"/>
+                            <constraint firstItem="Kpy-av-dMP" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1v5-pn-0Nd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kpy-av-dMP" secondAttribute="trailing" id="GzA-eg-bSa"/>
+                            <constraint firstAttribute="bottom" secondItem="Kpy-av-dMP" secondAttribute="bottom" id="cTK-9d-Op8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,6 +36,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NaitLogo" width="31" height="42"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -25,10 +25,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var celsiusSlider: UISlider!
     
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         celisusTextField.text = "\(currentCelsiusValue)"
+        
+        logoImageView.isUserInteractionEnabled = true
     }
 
     @IBAction func convertButtonTapped(_ sender: UIButton) {
@@ -60,6 +65,14 @@ class ViewController: UIViewController {
         celisusTextField.resignFirstResponder()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if touch?.view == logoImageView {
+            print("touched")
+        } else {
+            print("not touched")
+        }
+    }
     
 }
 
