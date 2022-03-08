@@ -15,8 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47Q-f8-708">
+                                <rect key="frame" x="191" y="431" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="47Q-f8-708" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HdD-ym-RmF"/>
+                            <constraint firstItem="47Q-f8-708" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qaV-Kq-LNZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Red" image="folder.badge.plus" catalog="system" id="C39-8h-W9u"/>
                 </viewController>
@@ -62,6 +73,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hUC-0M-e5K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iqZ-0w-SCW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
